@@ -1823,6 +1823,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_1__["HasError"].name, vform__WEBPACK_IMPORTED_MODULE_1__["HasError"]);
@@ -38877,6 +38878,8 @@ var render = function() {
         { attrs: { dark: "", color: "primary" } },
         [
           _c("v-toolbar-title", [_vm._v("Login form")]),
+          _vm._v(" "),
+          _c("div", { domProps: { innerHTML: _vm._s(_vm.form.errors) } }),
           _vm._v(" "),
           _c("v-spacer")
         ],

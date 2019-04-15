@@ -2,6 +2,7 @@
     <v-card class="elevation-12">
         <v-toolbar dark color="primary">
             <v-toolbar-title>Login form</v-toolbar-title>
+            <div v-html="form.errors"></div>
             <v-spacer></v-spacer>
         </v-toolbar>
         <v-card-text>
