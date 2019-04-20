@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::post('/checkfqdn', 'UserController@checkfqdn');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::post('Potentialcustomer', 'PotentialCustomerController@store');
+Route::get('anotherregister', 'Auth\RegisterController@showRegistrationForm')->name('anotherregister');
+Route::post('anotherregister', 'Auth\RegisterController@register');

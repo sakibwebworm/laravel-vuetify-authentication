@@ -41,18 +41,11 @@
                     fqdn:'',
                     email: '',
                     password: '',
-                    password_confirmation: '',
-                    error:{
-
-                        name: '',
-                        fqdn:'',
-                        email: '',
-                        password: ''
-
-                          }
-
+                    password_confirmation: ''
 
                 }),
+
+                emailError:false,
                 nameRules:[
                     v=> !!v || 'Name is required',
                     //v=> !this.errors.has('name') || this.form.errors.name
@@ -63,7 +56,8 @@
                 ],
                 emailRules: [
                     v => !!v || 'E-mail is required',
-                    v => /.+@.+/.test(v) || 'E-mail must be valid'
+                    v => /.+@.+/.test(v) || 'E-mail must be valid',
+                    v =>  v != this.form.errors.has('email')  || 'Email is taken',
                 ],
                 passwordRules: [
                     v => !!v || 'Password is required',
@@ -93,9 +87,13 @@
                 let self=this;
                 this.form.post('/register')
                     .then(({ data }) => {
-                        if(this.self.form.successful){
-                            
-                        } })
+                       alert(data);
+                        }).catch(({ errors }) => {
+                    this.emailError=true;
+                })
+            },
+            setp1(){
+
             }
         }
     };

@@ -41,6 +41,8 @@ Vue.component('login-component', require('./components/Login.vue').default);
 Vue.component('login-wrapper-component', require('./components/LoginWrapper.vue').default);
 Vue.component('register-component', require('./components/Register.vue').default);
 Vue.component('register-wrapper-component', require('./components/RegisterWrapper.vue').default);
+Vue.component('anotherregister-component', require('./components/AnotherRegister').default);
+Vue.component('anotherregister-wrapper-component', require('./components/AnotherRegisterWrapper').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

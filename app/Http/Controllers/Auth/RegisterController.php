@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -29,6 +30,16 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
+    public function showRegistrationForm()
+    {
+        if( Route::currentRouteName()=="anotherregister"){
+            return view('auth.anotherRegister');
+        }
+        else{
+            return view('auth.register');
+        }
+    }
 
     /**
      * Create a new controller instance.

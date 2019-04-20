@@ -26,6 +26,7 @@
     "dependencies": {
         "vee-validate": "^2.2.3",
         "vform": "^1.0.0",
+        "vue-form-wizard": "^0.8.4",
         "vuetify": "^1.5.11"
     }
 }
